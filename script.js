@@ -70,10 +70,12 @@ numbers.forEach((num) =>{
         }
         if (opr_select){
             full_eqn = true;
+            opr_select = false;
         }
 
         display_val+= num.textContent;
         display_eqn.textContent = display_val;
+        dividing = false;
     });
 });
 
@@ -82,6 +84,7 @@ operators.forEach((op) =>{
     op.addEventListener("click",()=>{
         if (op.textContent == "×") {
             opr = "*";
+            dividing = false;
         }
         else if (op.textContent == "÷"){
             opr = "/";
@@ -89,6 +92,7 @@ operators.forEach((op) =>{
         }
         else{
             opr = op.textContent;
+            dividing = false;
         }
         if (display_val.slice(-1) == "."){
             display_val = display_val.slice(0,-1);
@@ -108,7 +112,9 @@ eval.addEventListener("click", ()=>{
             prev_eqn.textContent += " " + display_eqn.textContent + " =";
             display_val =  Math.round(operate(Number(prev_val),opr,Number(display_val))*100000)/100000;
             display_eqn.textContent = display_val;
+            
         }
+    full_eqn = false;
     });
 let dot = document.querySelector(".decimal");
 dot.addEventListener("click",()=>{
