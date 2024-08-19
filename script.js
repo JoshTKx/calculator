@@ -28,5 +28,13 @@ let opr_dic = {
 function operate(fnum,opr,snum){
     return opr_dic[opr](fnum,snum);
 }
+let display_eqn = document.querySelector(".eqn");
+let display_val = "";
+let numbers = document.querySelectorAll(".num");
+numbers.forEach((num) =>{
+    num.addEventListener("click",() =>{
+        display_val+= num.textContent;
+        display_eqn.textContent = display_val;
+    });
+});
 
-console.log(operate(2,"-",6));
