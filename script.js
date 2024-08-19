@@ -61,6 +61,9 @@ delete_button.addEventListener("click",()=>{
 
 numbers.forEach((num) =>{
     num.addEventListener("click",() =>{
+        if (display_val.length >= 16){
+            return;
+        }
         if (dividing && num.textContent == "0"){
             alert("Cannot divide by 0!");
             clear();

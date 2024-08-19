@@ -1,0 +1,97 @@
+.cal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: gray;
+    padding: 20px;
+    border-radius: 16px;
+    margin: 200px 750px;    
+}
+
+
+.screen{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    background-color: whitesmoke;
+    border-radius: 8px;
+    width:320px;
+    height: 130px;
+    padding: 10px 20px 0px 10px;
+    
+ 
+    
+}
+
+.eqn{
+    font-size: 40px;
+    padding: 0px;
+    margin: 0px;
+    height: 80px;
+    flex-wrap: wrap;
+
+}
+
+.prev-eqn{
+    font-size: 24px;
+    padding: 0px;
+    margin: 0px;
+    height:50px;
+    flex-wrap: wrap;
+  
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+
+}
+.del-buttons{
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    justify-content: center;
+}
+.del,
+.clear{
+    margin-top: 20px;
+    border-radius: 4px;
+    font-size: 25px;
+    width:165px;
+    height:80px;
+    border: 0px;
+    border: 2px solid black;
+}
+
+.clear{
+    background-color: lightcoral;
+}
+.del{
+    background-color: lightblue;
+}
+
+.num-opr{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 20px;
+    gap:10px;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    gap:10px;
+}
+
+.num,
+.opr,
+.equal,
+.decimal{
+    font-size: 25px;
+    padding:20px;
+    border-radius: 4px;
+    width: 80px;
+    border: 2px solid black;
+}
